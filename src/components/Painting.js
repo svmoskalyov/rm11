@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import defaultImage from './default.jpg';
 
 const Painting = ({
@@ -20,6 +21,15 @@ const Painting = ({
       <button type="button">Добавить в корзину</button>
     </div>
   );
+};
+
+Painting.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  profileUrl: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  quantity: PropTypes.number.isRequired,
 };
 
 export default Painting;
